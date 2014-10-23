@@ -7,7 +7,8 @@ module Shoppe
     attachment :image
   
     # All products within this category
-    has_many :products, :dependent => :restrict_with_exception, :class_name => 'Shoppe::Product'
+    has_many :product_categorizations, dependent: :restrict_with_exception, class_name: 'Shoppe::ProductCategorization', inverse_of: :product_category
+    has_many :products, class_name: 'Shoppe::Product', through: :product_categorizations
     
     # Validations
     validates :name, :presence => true

@@ -380,6 +380,7 @@ pt-BR:
       attachments: Anexos
       back_to_categories: Voltar para a lista de categorias
       category_details: Detalhes da Categoria
+      choose_product_category: Escolha uma categoria de produto
       create_notice: A Categoria foi criada com sucesso
       delete_confirmation: Você tem certeza que deseja remover esta categoria?
       description: Descrição

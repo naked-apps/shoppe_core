@@ -387,6 +387,7 @@ pl:
       attachments: Załączniki
       back_to_categories: Powrót do listy kategorii
       category_details: Szczegóły kategorii
+      choose_product_category: Wybierz kategorię produktu
       create_notice: Kategoria została utworzona
       delete_confirmation:  Czy na pewno usunąć kategorię?
       description: Opis

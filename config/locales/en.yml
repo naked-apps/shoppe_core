@@ -381,6 +381,7 @@ en:
       attachments: Attachments
       back_to_categories: Back to categories list
       category_details: Category Details
+      choose_product_category: Choose a product category
       create_notice: Category has been created successfully
       delete_confirmation:  Are you sure you wish to remove this category?
       description: Description
