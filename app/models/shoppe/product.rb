@@ -16,7 +16,7 @@ module Shoppe
     # The product's categories
     #
     # @return [Shoppe::ProductCategory]
-    has_many :product_categorizations, class_name: 'Shoppe::ProductCategorization', inverse_of: :product
+    has_many :product_categorizations, dependent: :destroy, class_name: 'Shoppe::ProductCategorization', inverse_of: :product
     has_many :product_categories, class_name: 'Shoppe::ProductCategory', through: :product_categorizations
     
     # The product's tax rate
