@@ -386,6 +386,7 @@ en:
       delete_confirmation:  Are you sure you wish to remove this category?
       description: Description
       destroy_notice: Category has been removed successfully
+      destroy_alert: Category could not be removed
       image: Image
       name: Name
       new_category: New category
