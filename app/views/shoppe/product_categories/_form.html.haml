@@ -1,5 +1,6 @@
 = form_for @product_category do |f|
   = f.error_messages
+
   = field_set_tag t('shoppe.product_category.category_details') do
     .splitContainer
       %dl.half
@@ -11,6 +12,25 @@
     %dl
       %dt= f.label :description, t('shoppe.product_category.description')
       %dd= f.text_area :description, :class => 'text'
+
+  = field_set_tag t('shoppe.product_category.nesting.category_nesting') do
+    %dl
+      %dt= f.label :parent_id, t('shoppe.product_category.nesting.category_parent')
+      %dd= f.collection_select :parent_id, Shoppe::ProductCategory.except_descendants(@product_category).ordered, :id, :name, {:include_blank => t('shoppe.product_category.nesting.blank_option')}, {:class => 'chosen'}  
+    %dl
+      %dt= f.label :child_ids, t('shoppe.product_category.nesting.hierarchy')
+      %dd
+        %table.categoryChildren
+          %tbody
+            - if @product_category.children.count == 0
+              %tr
+                %td
+                  = t('shoppe.product_category.nesting.no_children')
+            - else
+              %tr
+                %td
+                  = "#{@product_category.name} (#{t('shoppe.product_category.nesting.current_category')})" 
+                = nested_product_category_rows(@product_category, current_category = @product_category, link_to_current = false, relative_depth = @product_category.depth)
 
   = field_set_tag t('shoppe.product_category.attachments') do
     %dl

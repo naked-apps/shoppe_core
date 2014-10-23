@@ -392,6 +392,13 @@ pt-BR:
       permalink: Permalink
       product_categories: Categorias de Produto
       update_notice: A Categoria foi atualizada com sucesso
+      nesting:
+        blank_option: None
+        category_nesting: Category Nesting
+        category_parent: Parent
+        current_category: Current
+        no_children: No Children
+        hierarchy: Hierarchy
 
     products:
       add_attribute: Adicionar atributo

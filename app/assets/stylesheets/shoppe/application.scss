@@ -262,6 +262,17 @@ header.main {
 					width:auto;
 				}
 			}
+
+			//
+			// category's children table
+			//
+			table.categoryChildren {
+				@extend table.importExample;
+				a { color:#000; }
+				tr:nth-last-child(2) td {
+					border: 1px solid #ddd;
+				}
+			}
 		}
 		p.submit {margin:0; background:#fff; border:1px solid #dce2eb; padding:25px; }
 		p.submit .button {

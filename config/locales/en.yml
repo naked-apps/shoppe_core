@@ -393,6 +393,13 @@ en:
       permalink: Permalink
       product_categories: Product categories
       update_notice: Category has been updated successfully
+      nesting:
+        blank_option: None
+        category_nesting: Category Nesting
+        category_parent: Parent
+        current_category: Current
+        no_children: No Children
+        hierarchy: Hierarchy
 
     products:
       add_attribute: Add attribute

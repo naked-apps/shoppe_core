@@ -1,5 +1,9 @@
+require 'awesome_nested_set'
+
 module Shoppe
   class ProductCategory < ActiveRecord::Base
+    # Allow the nesting of product categories
+    acts_as_nested_set dependent: :restrict_with_exception
   
     self.table_name = 'shoppe_product_categories'
   
@@ -16,6 +20,12 @@ module Shoppe
 
     # All categories ordered by their name ascending
     scope :ordered, -> { order(:name) }
+
+    # Root (no parent) product categories only
+    scope :without_parent, -> { where(parent_id: nil) }
+ 
+    # No descendents
+    scope :except_descendants, ->(record) { where.not(id: (Array.new(record.descendants) << record).flatten) }
     
     # Set the permalink on callback
     before_validation { self.permalink = self.name.parameterize if self.permalink.blank? && self.name.is_a?(String) }
