@@ -392,11 +392,12 @@ en:
       new_category: New category
       no_categories: No categories to display.
       permalink: Permalink
+      permalink_includes_ancestors: Prefix links in store with ancestor categories
       product_categories: Product categories
       update_notice: Category has been updated successfully
       nesting:
         blank_option: None
-        category_nesting: Category Nesting
+        category_nesting: Nesting
         category_parent: Parent
         current_category: Current
         no_children: No Children

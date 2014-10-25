@@ -2,14 +2,19 @@
   = f.error_messages
 
   = field_set_tag t('shoppe.product_category.category_details') do
+    %dl
+      %dt= f.label :name, t('shoppe.product_category.name')
+      %dd= f.text_field :name, :class => 'focus text'
     .splitContainer
-      %dl.half
-        %dt= f.label :name, t('shoppe.product_category.name')
-        %dd= f.text_field :name, :class => 'focus text'
       %dl.half
         %dt= f.label :permalink, t('shoppe.product_category.permalink')
         %dd= f.text_field :permalink, :class => 'text'
-    %dl
+      %dl.half
+        %dt &nbsp;
+        %dd.checkbox
+          = f.check_box :permalink_includes_ancestors
+          = f.label :permalink_includes_ancestors, t('shoppe.product_category.permalink_includes_ancestors')
+    %dl.cleared
       %dt= f.label :description, t('shoppe.product_category.description')
       %dd= f.text_area :description, :class => 'text'
 
