@@ -2,6 +2,7 @@ require 'awesome_nested_set'
 
 module Shoppe
   class ProductCategory < ActiveRecord::Base
+
     # Allow the nesting of product categories
     # :restrict_with_exception relies on a fix to the awesome_nested_set gem
     # which has been referenced in the Gemfile as we can't add a dependency
@@ -13,14 +14,14 @@ module Shoppe
     
     # Categories have an image attachment
     attachment :image
-  
+
     # All products within this category
     has_many :product_categorizations, dependent: :restrict_with_exception, class_name: 'Shoppe::ProductCategorization', inverse_of: :product_category
     has_many :products, class_name: 'Shoppe::Product', through: :product_categorizations
-    
+
     # Validations
     validates :name, :presence => true
-    validates :permalink, :presence => true, :uniqueness => true
+    validates :permalink, :presence => true, :uniqueness => true, :permalink => true
 
     # All categories ordered by their name ascending
     scope :ordered, -> { order(:name) }
