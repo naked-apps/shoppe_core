@@ -111,6 +111,7 @@ module Shoppe
     #
     # @return [BigDecimal]
     def calculated_price_including_tax
+      return self.default_variant.calculated_price_including_tax if self.default_variant
       tax_rate = self.tax_rate ? self.tax_rate.rate : BigDecimal(0)
       (self.price_was / BigDecimal(100) * tax_rate) + self.price_was
     end
