@@ -1,0 +1,14 @@
+- unless @properties.empty?
+  .table
+    %table.data
+      %thead
+        %tr
+          %th= t('shoppe.orders.property_key')
+          %th= t('shoppe.orders.property_value')
+      %tbody
+        - @properties.each do |key, val|
+          %tr
+            %td= key.titleize
+            %td= val
+- else
+  %p.notice= t('shoppe.orders.no_properties')

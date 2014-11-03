@@ -306,6 +306,7 @@ en:
       no_delivery_required: No delivery required for this order.
       no_orders: No orders to display.
       no_payments: There are no payments recorded for this order...
+      no_properties: There are no properties recorded for this order...
       notes: Notes
       number: Number
       order: Order
@@ -322,6 +323,9 @@ en:
       payment: Payment
       payment_remove_confirmation: Are you sure you wish to remove this payment?
       payments: Payments
+      properties: Extra Information
+      property_key: Property
+      property_value: Value
       phone_number: Phone number
       post_code: Post code
       price: Price

@@ -23,3 +23,7 @@
     = field_set_tag t('shoppe.orders.payments'), :class => 'padded orderPayments' do
       = render 'payments_table'
       = render 'payments_form'
+
+  - unless @order.properties.empty?
+    = field_set_tag t('shoppe.orders.properties'), :class => 'padded' do
+      = render 'properties_table'

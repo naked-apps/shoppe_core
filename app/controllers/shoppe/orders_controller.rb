@@ -33,6 +33,7 @@ module Shoppe
 
     def show
       @payments = @order.payments.to_a
+      @properties = @order.properties
     end
 
     def update
