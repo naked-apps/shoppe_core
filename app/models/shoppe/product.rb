@@ -213,7 +213,7 @@ module Shoppe
     end
 
     private
-    
+
     def has_at_least_one_product_category
       errors.add(:base, 'must add at least one product category') if self.product_categories.blank?
     end
