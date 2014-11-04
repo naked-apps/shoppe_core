@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+# acts_as_nested_set dependent :restrict_with_exception doesn't work unless we use this branch
+gem 'awesome_nested_set', '~> 3.0.1', github: 'collectiveidea/awesome_nested_set', branch: 'master'
+
 # Declare your gem's dependencies in shoppe.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
@@ -12,6 +15,3 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
-
-# acts_as_nested_set dependent :restrict_with_exception doesn't work unless we use this branch
-gem 'awesome_nested_set', '~> 3.0.1', github: 'naked-apps/awesome_nested_set', branch: 'fix_dependent_restrict_with_exception'
