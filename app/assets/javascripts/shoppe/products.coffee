@@ -12,7 +12,7 @@ $ ->
 
   #
   # Setup the product form to calculate tax
-  #
+  # 
   setupProductForm = (form)->
     # All select boxes should use Chosen
     $('select#product_tax_rate_id', form).on 'change', -> calculateTax $(this).parents('form'), $(this).attr('id')
@@ -21,5 +21,5 @@ $ ->
   # 
   # Automatically set up the form on page load if one exists.
   #
-  if $('form.productForm').length
+  if $('select#product_tax_rate_id').length
     setupProductForm $('form.productForm')
