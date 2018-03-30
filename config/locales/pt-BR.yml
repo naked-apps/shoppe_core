@@ -447,8 +447,8 @@ pt-BR:
       website_properties: Propriedades do Site
       weight: Peso
 
-      imports: 
-        help: Products and Categories are matched by name.  If no product is found, a new one will be created with all the attributes on the line.  If a product is found, only the quantity will be updated and all other fields will be ignored.  If no category is found, one with that name will be created .  One product per line.  
+      imports:
+        help: Products and Categories are matched by name.  If no product is found, a new one will be created with all the attributes on the line.  If a product is found, only the quantity will be updated and all other fields will be ignored.  If no category is found, one with that name will be created .  One product per line.
         success: Produtos importados com sucesso
         examples:
           first:
@@ -619,6 +619,7 @@ pt-BR:
         currency_unit: Unidade Monetária
         tax_name: Nome do Imposto
         demo_mode: Modo Demonstração
+        site_message: Site Message
 
       options:
         # Options for boolean settings
@@ -633,6 +634,7 @@ pt-BR:
         email_address: O endereço de e-mail para usar quando enviar mensagens para fora. Precisa ser apenas um endereço de e-mail.
         store_name: Este é o nome da sua loja que será usado em toda a interface administrativa do Shoppe como também nas mensagens de e-mail para fora.
         tax_name: O nome para o "Imposto" que será mostrado na interface administrativa. Comumente substituído por VAT nos países da união europeia.
+        site_message: If filled, this message is shown at the top of every page on the website.
 
       save_settings: Salvar Preferências
       page_title: Preferências
@@ -643,6 +645,7 @@ pt-BR:
         email_address: vendas@example.com
         store_name: Widgets Inc.
         tax_name: Imposto
+        site_message: ''
 
   layouts:
     shoppe:

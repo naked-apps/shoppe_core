@@ -617,6 +617,7 @@ es:
         currency_unit: Unidad de moneda
         tax_name: Nombre de Impuestos
         demo_mode: Modo demostración
+        site_message: Site Message
 
       options:
         # Options for boolean settings
@@ -631,6 +632,7 @@ es:
         email_address: La dirección de e-mail que se usará al enviar mensajes. Debe ser solo una dirección de e-mail.
         store_name: Este es el nombre de su tienda que será usado a través de la interfaz de administración de Shoppe, así como también en los mensajes de correo salientes por defecto.
         tax_name: El nombre para el "impuesto" que será mostrado en su interfaz de administración. Comunmente reemplazado con VAT en los países europeos.
+        site_message: If filled, this message is shown at the top of every page on the website.
 
       save_settings: Guardar configuración
       page_title: Configuración
@@ -641,6 +643,7 @@ es:
         email_address: sales@example.com
         store_name: Widgets Inc.
         tax_name: Tax
+        site_message: ''
 
   layouts:
     shoppe:
