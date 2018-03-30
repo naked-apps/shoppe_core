@@ -460,8 +460,8 @@ en:
       website_properties: Website Properties
       weight: Weight
 
-      imports: 
-        help: Products and Categories are matched by name.  If no product is found, a new one will be created with all the attributes on the line.  If a product is found, only the quantity will be updated and all other fields will be ignored.  If no category is found, one with that name will be created .  One product per line.  
+      imports:
+        help: Products and Categories are matched by name.  If no product is found, a new one will be created with all the attributes on the line.  If a product is found, only the quantity will be updated and all other fields will be ignored.  If no category is found, one with that name will be created .  One product per line.
         success: Products imported successfully
         examples:
           first:
@@ -632,6 +632,7 @@ en:
         currency_unit: Currency Unit
         tax_name: Tax Name
         demo_mode: Demo Mode
+        site_message: Site Message
 
       options:
         # Options for boolean settings
@@ -646,6 +647,7 @@ en:
         email_address: The e-mail address to use when sending outbound messages. Must just be an e-mail address.
         store_name: This is the name of your store which will be used through the Shoppe admin interface as well as in the default outbound e-mail messages.
         tax_name: The name for "Tax" which will be displayed in your admin interface. Commonly replaced with VAT in European countries.
+        site_message: If filled, this message is shown at the top of every page on the website.
 
       save_settings: Save Settings
       page_title: Settings
@@ -656,6 +658,7 @@ en:
         email_address: sales@example.com
         store_name: Widgets Inc.
         tax_name: Tax
+        site_message: ''
 
   layouts:
     shoppe:
